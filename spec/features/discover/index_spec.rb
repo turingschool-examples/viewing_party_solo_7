@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe "Discover Movies: Search By Title", type: :feature do
-
   describe "When a user visits '/users/:id/discover'" do
     before(:each) do
       @user1 = User.create!(name: "Taylor Swift", email: "taylorswift@gmail.com")
