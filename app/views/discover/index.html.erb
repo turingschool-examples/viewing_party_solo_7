@@ -1,0 +1,6 @@
+<%= button_to "Discover Top Rated Movies", "users/#{@user_id}/movies" %><br>
+
+<%= form_with url: "users/#{@user_id}/movies", method: :get do |form| %>
+  <%= form.text_field :search %>
+  <%= form.submit "Search By Movie Title" %>
+<% end %>
