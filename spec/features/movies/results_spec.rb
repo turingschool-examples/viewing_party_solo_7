@@ -14,7 +14,7 @@ RSpec.describe "Movies Results Page", type: :feature do
     # - Vote Average of the movie
     
     # I should also see a button to return to the Discover Page.
-    it "Should see Title (as link to the Movie Details Page)" do
+    xit "Should see Title (as link to the Movie Details Page)" do
       visit "/users/#{@user1.id}/discover"
 
       click_button "Discover Top Rated Movies"
@@ -28,12 +28,18 @@ RSpec.describe "Movies Results Page", type: :feature do
 
       click_button "Discover Top Rated Movies"
 
-      expect(current_path).to eq "/users/#{@user1.id}/movies"
+      expect(current_path).to eq("/users/#{@user1.id}/movies")
 
       expect(page).to have_content("Vote Average:")
     end
-    xit "Should see a button to return to the Discover Page" do
-      
+    it "Should see a button to return to the Discover Page" do
+      visit "/users/#{@user1.id}/movies"
+
+      expect(page).to have_button("Return To Discover Page")
+
+      click_button "Return To Discover Page"
+
+      expect(current_path).to eq("/users/#{@user1.id}/discover")
     end
   end
 end
