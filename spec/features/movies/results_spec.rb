@@ -47,6 +47,7 @@ RSpec.describe "Movies Results Page", type: :feature do
         expect(page).to have_content('Vote Average: 8.591')
       end
     end
+    
     it "Shows the vote average of the movie", :vcr do
       visit "/users/#{@user1.id}/discover"
 
@@ -55,8 +56,18 @@ RSpec.describe "Movies Results Page", type: :feature do
       expect(current_path).to eq("/users/#{@user1.id}/movies")
 
       expect(page).to have_content('Vote Average', count: 20)
-      save_and_open_page
     end
+
+    it "Can search for movies", :vcr do
+      visit "/users/#{@user1.id}/discover"
+
+      fill_in 'search', with: 'terminator'
+
+      click_button 'Search By Movie Title'
+
+      expect(current_path).to eq("/users/#{@user1.id}/movies")
+    end
+
     it "Should see a button to return to the Discover Page", :vcr do
       visit "/users/#{@user1.id}/movies"
 
