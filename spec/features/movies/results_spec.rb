@@ -14,23 +14,48 @@ RSpec.describe "Movies Results Page", type: :feature do
     # - Vote Average of the movie
     
     # I should also see a button to return to the Discover Page.
-    xit "Should see Title (as link to the Movie Details Page)" do
+    it "Should see Title (as link to the Movie Details Page) and the vote average", :vcr do
       visit "/users/#{@user1.id}/discover"
 
       click_button "Discover Top Rated Movies"
 
       expect(current_path).to eq("/users/#{@user1.id}/movies")
-
-      expect(page).to have_link("Title:")
+      
+      expect(page).to have_content('Movie Title:', count: 20)
+      
+      expect(page).to have_link("The Shawshank Redemption")
+      expect(page).to have_link("The Godfather")
+      expect(page).to have_link("The Godfather Part II")
+      expect(page).to have_link("Schindler's List")
+      expect(page).to have_link("12 Angry Men")
+      expect(page).to have_link("The Dark Knight")
+      expect(page).to have_link("The Green Mile")
+      expect(page).to have_link("Pulp Fiction")
+      expect(page).to have_link("The Lord of the Rings: The Return of the King")
+      expect(page).to have_link("Forrest Gump")
+      
+      within('#movie-238') do
+        expect(page).to have_link('The Godfather')
+        expect(page).to have_content('Vote Average: 8.707')
+      end
+      within('#movie-278') do
+        expect(page).to have_link('The Shawshank Redemption')
+        expect(page).to have_content('Vote Average: 8.711')
+      end
+      within('#movie-240') do
+        expect(page).to have_link('The Godfather Part II')
+        expect(page).to have_content('Vote Average: 8.591')
+      end
     end
-    xit "Shows the vote average of the movie" do
+    it "Shows the vote average of the movie", :vcr do
       visit "/users/#{@user1.id}/discover"
 
       click_button "Discover Top Rated Movies"
 
       expect(current_path).to eq("/users/#{@user1.id}/movies")
 
-      expect(page).to have_content("Vote Average:")
+      expect(page).to have_content('Vote Average', count: 20)
+      save_and_open_page
     end
     it "Should see a button to return to the Discover Page", :vcr do
       visit "/users/#{@user1.id}/movies"

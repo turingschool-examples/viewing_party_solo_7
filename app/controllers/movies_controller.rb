@@ -6,5 +6,6 @@ class MoviesController < ApplicationController
     end
     response = conn.get("/3/movie/top_rated")
     json = JSON.parse(response.body, symbolize_names: true)
+    @movies = json[:results]
   end
 end
