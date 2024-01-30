@@ -46,8 +46,12 @@ RSpec.describe "Movies Results Page", type: :feature do
         expect(page).to have_link('The Godfather Part II')
         expect(page).to have_content('Vote Average: 8.591')
       end
+
+      click_link("The Godfather")
+
+      expect(current_path).to eq("/users/#{@user1.id}/movies/238")
     end
-    
+
     it "Shows the vote average of the movie", :vcr do
       visit "/users/#{@user1.id}/discover"
 
