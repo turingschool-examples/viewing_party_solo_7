@@ -32,7 +32,7 @@ RSpec.describe "Movies Results Page", type: :feature do
 
       expect(page).to have_content("Vote Average:")
     end
-    it "Should see a button to return to the Discover Page" do
+    it "Should see a button to return to the Discover Page", :vcr do
       visit "/users/#{@user1.id}/movies"
 
       expect(page).to have_button("Return To Discover Page")
