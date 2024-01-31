@@ -28,7 +28,6 @@ describe 'the discover index page' do
     # When the user clicks the Search button, they should be taken to the movies results page
     click_button 'Search Movies'
 
-save_and_open_page
     expect(current_path).to eq user_movies_path(@user_1)
   end
 end
