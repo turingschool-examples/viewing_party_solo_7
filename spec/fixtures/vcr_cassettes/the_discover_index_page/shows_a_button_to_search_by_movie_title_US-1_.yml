@@ -24,12 +24,8 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
-      Date:
-      - Fri, 02 Feb 2024 03:08:56 GMT
       Server:
       - openresty
-      Cache-Control:
-      - public, max-age=4568
       X-Memc:
       - HIT
       X-Memc-Key:
@@ -38,6 +34,10 @@ http_interactions:
       - '23393'
       X-Memc-Expires:
       - '4568'
+      Date:
+      - Fri, 02 Feb 2024 04:51:27 GMT
+      Cache-Control:
+      - public, max-age=28411
       Etag:
       - W/"0e23279b004381f72a34159d5c7dfd1f"
       Vary:
@@ -46,19 +46,19 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 6f9c977a59db9a95a2e65aaab6409f3c.cloudfront.net (CloudFront)
+      - 1.1 ef3f6fb1096ef078a436775e644d75f4.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - p-eBkfO2gnLCHJjIYyqCqOHzJJUkGsZyW41HxIqnqIAyfqd9MmNpTg==
+      - I8hukSaEfMISbtx0mswbTIfa2P4vM5iy6VMJKbfS9X-MN9CYH5tK0g==
       Age:
-      - '4549'
+      - '13525'
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[],"total_pages":1,"total_results":0}'
-  recorded_at: Fri, 02 Feb 2024 04:24:45 GMT
+  recorded_at: Fri, 02 Feb 2024 08:36:52 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=TMDB_API_KEY&include_adult=false&language=en-US&page=1&query=
@@ -83,12 +83,8 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
-      Date:
-      - Fri, 02 Feb 2024 03:08:56 GMT
       Server:
       - openresty
-      Cache-Control:
-      - public, max-age=4568
       X-Memc:
       - HIT
       X-Memc-Key:
@@ -97,6 +93,10 @@ http_interactions:
       - '23393'
       X-Memc-Expires:
       - '4568'
+      Date:
+      - Fri, 02 Feb 2024 04:51:27 GMT
+      Cache-Control:
+      - public, max-age=28411
       Etag:
       - W/"0e23279b004381f72a34159d5c7dfd1f"
       Vary:
@@ -105,17 +105,17 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 c9e99b9239214bb7d4039011c48ba3ee.cloudfront.net (CloudFront)
+      - 1.1 97103436430d2d5eccb3856889cf7ecc.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - OQUwKGzZtNLjOXVjNlFbp4nJbgv6Gx_M1okb9Mlnzu29334NroApKQ==
+      - eF04xBgWTVOvWM2G5RAf31nXViFh1f1qJ3J803u6HjDtZGxFu81QEw==
       Age:
-      - '4549'
+      - '13525'
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[],"total_pages":1,"total_results":0}'
-  recorded_at: Fri, 02 Feb 2024 04:24:45 GMT
+  recorded_at: Fri, 02 Feb 2024 08:36:52 GMT
 recorded_with: VCR 6.2.0

@@ -18,4 +18,12 @@ class MovieDatabaseService
     def get_movies_by_title(title)
         get_url("https://api.themoviedb.org/3/search/movie?query=#{title}&include_adult=false&language=en-US&page=1")
     end
+
+    def get_movie_by_id(id)
+        get_url("https://api.themoviedb.org/3/movie/#{id}?language=en-US")
+    end
+
+    def get_movie_cast_by_id(id)
+        get_url("https://api.themoviedb.org/3/movie/#{id}/credits?language=en-US")
+    end
 end

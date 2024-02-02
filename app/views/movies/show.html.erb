@@ -1,0 +1,19 @@
+<h1><%= @facade.movie_by_id.title %></h1><br>
+
+<ul>
+    <li><%= "Average Rating: #{@facade.movie_by_id.vote_average}" %></li><br>
+    <li><%= "Runtime: #{@facade.convert_mins_to_hours_and_mins(@facade.movie_by_id.runtime)}" %></li><br>
+    <li><%= "Description: #{@facade.movie_by_id.summary}" %></li><br>
+    <li><p>Genre:</p></li>
+    <ul>
+        <% @facade.movie_by_id.genres.map do |genre| %>
+            <li><%= genre[:name] %></li>
+        <% end %>
+    </ul><br>
+    <li><p>Cast:</p></li>
+    <ul>
+    <% @facade.movie_cast_by_id.each do |cast_member| %>
+        <li><%= cast_member %></li>
+    <% end %>
+    </ul><br>
+</ul>
