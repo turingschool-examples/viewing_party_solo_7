@@ -5,6 +5,9 @@ class MoviesController < ApplicationController
     @facade = MoviesFacade.new(params[:search_movies])
   end
 
+  def show
+  end
+
   private
 
   def set_user
