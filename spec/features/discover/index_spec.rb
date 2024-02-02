@@ -9,7 +9,7 @@ describe 'the discover index page' do
     visit user_discover_index_path(@user_1)
   end
 
-  it 'shows a button to discover top rated movies (US-1)' do
+  it 'shows a button to discover top rated movies (US-1)', :vcr do
     expect(page).to have_button('Discover Top Rated Movies')
 
     # When the user clicks the Top Rated Movies button, they should be taken to the movies results page
@@ -22,7 +22,7 @@ describe 'the discover index page' do
     expect(page).to have_field('search_movies')
   end
 
-  it 'shows a button to search by movie title (US-1)' do
+  it 'shows a button to search by movie title (US-1)', :vcr do
     expect(page).to have_button('Search Movies')
 
     # When the user clicks the Search button, they should be taken to the movies results page

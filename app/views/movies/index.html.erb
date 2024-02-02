@@ -1,0 +1,10 @@
+<%= link_to 'Return to Discover', user_discover_index_path(@user) %><br><br>
+
+<h1><%= @facade.movies.count %> Results</h1>
+<% @facade.movies.each do |movie| %>
+  
+  <ul class="movie">
+    <li><b><%= link_to "#{movie.title}", user_movie_path(@user, movie.id) %></b></li>
+    <%= "Average Rating: #{movie.vote_average}" %>
+  </ul>
+<% end %>
