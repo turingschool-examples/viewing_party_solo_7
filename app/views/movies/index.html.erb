@@ -1,4 +1,5 @@
-<li><%= link_to 'Return to Discover', user_discover_index_path(@user), style: 'pull-right' %></li>
+<%= link_to 'Return to Discover', user_discover_index_path(@user) %><br><br>
+
 <h1><%= @facade.movies.count %> Results</h1>
 <% @facade.movies.each do |movie| %>
   
