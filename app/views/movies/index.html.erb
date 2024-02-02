@@ -1,7 +1,8 @@
 <h1><%= @facade.movies.count %> Results</h1>
 <% @facade.movies.each do |movie| %>
-  <li><%= link_to "#{movie.title}", user_movie_path(@user, movie.id) %>
+  
   <ul class="movie">
-    <li class="role"><%= "Average Rating: #{movie.vote_average}" %></li>
+    <li><b><%= link_to "#{movie.title}", user_movie_path(@user, movie.id) %></b></li>
+    <%= "Average Rating: #{movie.vote_average}" %>
   </ul>
 <% end %>

@@ -46,19 +46,19 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 97103436430d2d5eccb3856889cf7ecc.cloudfront.net (CloudFront)
+      - 1.1 6f9c977a59db9a95a2e65aaab6409f3c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - l3GVJJTcerw-JBlwztqvlUYu6Bn1CAmOF0Sq8w9QV6lOcbu5B3GkBA==
+      - p-eBkfO2gnLCHJjIYyqCqOHzJJUkGsZyW41HxIqnqIAyfqd9MmNpTg==
       Age:
-      - '4318'
+      - '4549'
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[],"total_pages":1,"total_results":0}'
-  recorded_at: Fri, 02 Feb 2024 04:20:54 GMT
+  recorded_at: Fri, 02 Feb 2024 04:24:45 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=TMDB_API_KEY&include_adult=false&language=en-US&page=1&query=
@@ -105,17 +105,17 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 65734c1b2d30e126d5bc1c66cd7b6f0a.cloudfront.net (CloudFront)
+      - 1.1 c9e99b9239214bb7d4039011c48ba3ee.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - LAX50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - R_E50rj7PYe7rRu6FDNcsAYKoHYu_KhrmgOGXut1nj4aCtYgpKkvMg==
+      - OQUwKGzZtNLjOXVjNlFbp4nJbgv6Gx_M1okb9Mlnzu29334NroApKQ==
       Age:
-      - '4318'
+      - '4549'
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[],"total_pages":1,"total_results":0}'
-  recorded_at: Fri, 02 Feb 2024 04:20:54 GMT
+  recorded_at: Fri, 02 Feb 2024 04:24:45 GMT
 recorded_with: VCR 6.2.0
