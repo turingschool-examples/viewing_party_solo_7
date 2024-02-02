@@ -43,4 +43,16 @@ describe 'the movies index page', :vcr do
       expect(page).to have_link("Hope Springs Eternal: A Look Back at The Shawshank Redemption")
     end
   end
+
+  describe 'the Return to Discover button' do
+    it "shows a button to return to the user's discover page (US-2)" do
+      click_button 'Discover Top Rated Movies'
+
+      expect(page).to have_link('Return to Discover') # Using link instead of button to better match styling of nav bar
+
+      click_link 'Return to Discover'
+
+      expect(current_path).to eq user_discover_index_path(@user_1)
+    end
+  end
 end
