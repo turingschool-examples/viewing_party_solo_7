@@ -19,8 +19,11 @@ class MoviesFacade
     def movie_by_id
         service = MovieDatabaseService.new
         movie_json = service.get_movie_by_id(@param)
+        movie_cast_json = service.get_movie_cast_by_id(@param)
 
         @movie = Movie.new(movie_json)
+        @movie.cast = movie_cast_json[:cast]
+        @movie
     end
 
     def movie_cast_by_id
