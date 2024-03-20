@@ -1,0 +1,9 @@
+<h1>Discover Movies</h1>
+
+<%= link_to "Find Top Rated Movies", user_movies_path(@user), class: "nav-link", method: :get %>
+
+<%= form_with url: user_movies_path(@user), method: :get do |form| %>
+  <%= form.label :query, "Search by Movie Title" %><br>
+  <%= form.text_field :query %>
+  <%= form.submit "Search Movie Title" %>
+<% end %>
