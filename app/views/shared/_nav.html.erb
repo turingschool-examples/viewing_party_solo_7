@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <ul class="nav navbar-nav pull-right">
     <li style="margin-right: 10px;"><%= link_to 'Home', root_path %></li>
-    <% if @user %>
+    <% if @user && @user.id != nil %>
       <li style="margin-right: 10px;"><%= link_to "Discover Page", discover_user_path(@user), method: :get %> </li>
     <% end %>
     </ul>
