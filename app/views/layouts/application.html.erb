@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>ViewingPartyLite7</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -11,13 +12,16 @@
   </head>
 
   <body>
+  <div style="text-align: center;">
+  <h1>Viewing Party</h1>
+  </div>
   <%= render partial: "shared/nav" %>
 
     <div id="mainBody" class="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, class: name %>
       <% end %>
-      <%= yield %>  
+      <%= yield %>
     </div>
   </body>
 </html>
