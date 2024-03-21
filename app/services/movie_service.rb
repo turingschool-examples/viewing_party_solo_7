@@ -16,6 +16,21 @@ class MovieService
     parse_response(response)
   end
 
+  def movie_details(movie_id)
+    response = @conn.get("/3/movie/#{movie_id}")
+    parse_response(response)
+  end
+
+  def movie_credits(movie_id)
+    response = @conn.get("/3/movie/#{movie_id}/credits")
+    parse_response(response)
+  end
+
+  def movie_reviews(movie_id)
+    response = @conn.get("/3/movie/#{movie_id}/reviews")
+    parse_response(response)
+  end
+
   private
 
   def parse_response(response)
