@@ -7,7 +7,7 @@ RSpec.describe "Users" do
     visit discover_user_path(user)
 
     expect(page).to have_http_status(:success)
-    expect(page.body).to include("Discover Top Rated Movies")
+    expect(page.body).to include("Find Top Rated Movies")
     expect(page.body).to include("Search by Movie Title")
   end
 end
