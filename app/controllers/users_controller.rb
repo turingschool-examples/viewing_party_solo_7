@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       end
    end
 
-   def discover
+   def index
       @user = User.find(params[:id])
    end
 

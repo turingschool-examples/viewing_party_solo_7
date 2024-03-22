@@ -4,7 +4,6 @@
   <%= link_to "Find Top Rated Movies", user_movies_path(@user), method: :get %>
 </div>
 
-<!-- Using a div to group the form elements -->
 <div style="margin-top: 20px;">
   <%= form_with url: user_movies_path(@user), method: :get do |form| %>
     <div style="margin-bottom: 10px;">
