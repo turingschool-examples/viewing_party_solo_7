@@ -1,0 +1,19 @@
+<%= form_with url: user_movie_viewing_parties_path(@user, @movie.id), local: true do |form| %>
+  <h1><%= @movie.title %></h1>
+
+  <%= form.label :duration, 'Duration of Party (minutes)' %>
+  <%= form.number_field :duration, value: @movie.runtime, min: @movie.runtime %>
+
+  <%= form.label :date, 'When' %>
+  <%= form.date_field :date %>
+
+  <%= form.label :start_time, 'Start Time' %>
+  <%= form.time_field :start_time %>
+
+  <h2>Guests</h2>
+  <% 3.times do |index| %>
+    <%= text_field_tag 'viewing_party[guest_emails][]', nil, placeholder: "(Guest's email (optional)" %><br>
+  <% end %>
+
+  <%= form.submit "Create Party" %>
+<% end %>
