@@ -1,14 +1,16 @@
 <%= form_with url: user_movie_viewing_parties_path(@user, @movie.id), local: true do |form| %>
-  <h1><%= @movie.title %></h1>
+  <h1>New Viewing Party</h1>
+  <h2><%= @movie.title %></h2>
 
-  <%= form.label :duration, 'Duration of Party (minutes)' %>
-  <%= form.number_field :duration, value: @movie.runtime, min: @movie.runtime %>
+  <ul>
+  <li><%= form.label :duration, 'Duration of Party (minutes)' %>
+  <%= form.number_field :duration, value: @movie.runtime, min: @movie.runtime %></li>
 
-  <%= form.label :date, 'When' %>
-  <%= form.date_field :date %>
+  <li><%= form.label :date, 'Date' %>
+  <%= form.date_field :date %></li>
 
-  <%= form.label :start_time, 'Start Time' %>
-  <%= form.time_field :start_time %>
+  <li><%= form.label :start_time, 'Start Time' %>
+  <%= form.time_field :start_time %></li>
 
   <h2>Guests</h2>
   <% 3.times do |index| %>
