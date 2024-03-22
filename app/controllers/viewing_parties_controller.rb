@@ -7,25 +7,6 @@ class ViewingPartiesController < ApplicationController
     @viewing_party = ViewingParty.new(duration: @movie.runtime)
   end
 
-  def create
-    @viewing_party = ViewingParty.new(viewing_party_params)
-
-    if @viewing_party.save
-      create_user_party(params[:user_id], @viewing_party.id, true)
-
-      guest_emails = params[:viewing_party][:guest_emails].reject(&:blank?)
-
-      guest_emails.each do |email|
-        guest = User.find_by(email: email)
-        create_user_party(guest.id, @viewing_party.id, false) if guest
-      end
-
-      redirect_to user_path(params[:user_id])
-    else
-      render :new
-    end
-  end
-
   private
 
   def viewing_party_params
